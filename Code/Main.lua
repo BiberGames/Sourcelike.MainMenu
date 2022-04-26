@@ -29,12 +29,14 @@ function CreateBackgroundElemants()
     CLTransform.SetParent("Flash", "Background")
     
     -- adds the components
+    CLGameObject.AddComponent("Background", "UI.Image")
+    CLUI.SetAnchors("Background", 0, 0, 1, 1)
+
     CLGameObject.AddComponent("BackgroundImage", "UI.Image")
-    CLUI.SetImageSize("BackgroundImage", CLUI.GetScreenWidth(), CLUI.GetScreenHeight())
+    CLUI.SetAnchors("BackgroundImage", 0, 0, 1, 1)
 
     CLGameObject.AddComponent("Flash", "UI.Image")
-    CLUI.SetImageSize("Flash", CLUI.GetScreenWidth(), CLUI.GetScreenHeight())
-    
+    CLUI.SetAnchors("Flash", 0, 0, 1, 1)
 
     --sets the position in the hierarchy
     CLTransform.SetSiblingIndex("Background", 0)
