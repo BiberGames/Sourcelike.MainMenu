@@ -38,7 +38,7 @@ function CreateBackgroundElemants()
     CLGameObject.AddComponent("Flash", "UI.Image")
     CLUI.SetAnchors("Flash", 0, 0, 1, 1)
 
-    --sets the position in the hierarchy
+    --sets the index in the hierarchy
     CLTransform.SetSiblingIndex("Background", 0)
 
     -- resets the scale of the background
@@ -66,6 +66,7 @@ function UpdateBackground()
 
     if BackgroundImageScale[1] > 1.35 then
         CLUI.SetSpriteAlpha("Flash", 1, 0.0001)
+        -- nice...
         NewImage()
         CLTransform.Rotation("BackgroundImage", 0, 0, 0, 0)
         CLTransform.Scale("BackgroundImage", 1, 1, 1, 0)
